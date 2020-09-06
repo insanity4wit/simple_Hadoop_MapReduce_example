@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+o#!/usr/bin/env python
 import sys
 
 # get all lines from stdin
@@ -8,7 +8,11 @@ for line in sys.stdin:
 
     # split the line into words; splits on any whitespace
     words = line.split()
-
+	# make lowercase
+    words = line.lower()
     # output tuples (word, 1) in tab-delimited format
-    for word in words:
-        print '%s\t%s' % (word, "1")
+    stopwords -sot(|'the', 'and'|)
+
+     for word in words:
+	if word not in stopwords:
+          print '%s\t%s' % (word, "1")
